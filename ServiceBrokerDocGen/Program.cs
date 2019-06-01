@@ -19,7 +19,7 @@ namespace ServiceBrokerDocGen
         {
             Console.WriteLine(" ");
             Console.WriteLine("Welcome.");
-            Console.WriteLine("This program automatically creates the Service Broker Readme.md from the Cloudformation Template provided.");            
+            Console.WriteLine("This program automatically creates the Service Broker doc Readme.md from the Cloudformation Template provided.");            
             Console.WriteLine("==========================================================================================================");
             Console.WriteLine("IMPORTANT: Ensure the Template contains the 'AWS::ServiceBroker::Specification' section before proceeding");
             Console.WriteLine(" ");
@@ -171,6 +171,18 @@ namespace ServiceBrokerDocGen
 
             //Start of K8 section Skeleton
             //==================================================
+
+            //Get Parameters to add into K8 setion
+            string K8Params = "";
+
+            foreach (var item in Params)
+            {
+                string ParamValue = item.Default ?? "[VALUE]";               
+                K8Params += "".PadRight(4) + item.Name + ": " + ParamValue + NewLine;               
+            }
+            
+            //==================================================
+
             Content += @"# Kubernetes/Openshift Examples" + CarriageRtn;
 
             Content += @"***Note:*** Examples do not include generic parameters, if you have not setup defaults for these you will need to add them as additional parameters" + CarriageRtn;
@@ -185,12 +197,12 @@ namespace ServiceBrokerDocGen
             Content += "apiVersion: servicecatalog.k8s.io / v1beta1" + NewLine;
             Content += "kind: ServiceInstance" + NewLine;
             Content += "metadata: " + NewLine;
-            Content += "  name: [VALUE]" + NewLine;
+            Content += "  name: " + AWSSvBSpec.Name+"-production-complete-example" + NewLine;
             Content += "spec: " + NewLine;
-            Content += "  clusterServiceClassExternalName: [VALUE]" + NewLine;
-            Content += "  clusterServicePlanExternalName: [VALUE]" + NewLine;
+            Content += "  clusterServiceClassExternalName: " + AWSSvBSpec.Name + NewLine;
+            Content += "  clusterServicePlanExternalName: production" + NewLine;
             Content += "  parameters: " + NewLine;
-            Content += "    [KEY]: [VALUE] # REQUIRED/OPTIONAL" + NewLine;
+            Content += K8Params;            
             Content += "```" + CarriageRtn + NewLine;
 
             Content += "### Complete" + NewLine;
@@ -198,13 +210,13 @@ namespace ServiceBrokerDocGen
             Content += "apiVersion: servicecatalog.k8s.io / v1beta1" + NewLine;
             Content += "kind: ServiceInstance" + NewLine;
             Content += "metadata: " + NewLine;
-            Content += "  name: [VALUE]" + NewLine;
+            Content += "  name: " + AWSSvBSpec.Name + "-production-complete-example" + NewLine;
             Content += "spec: " + NewLine;
-            Content += "  clusterServiceClassExternalName: [VALUE]" + NewLine;
-            Content += "  clusterServicePlanExternalName: [VALUE]" + NewLine;
+            Content += "  clusterServiceClassExternalName: " + AWSSvBSpec.Name + NewLine;
+            Content += "  clusterServicePlanExternalName: production" + NewLine;
             Content += "  parameters: " + NewLine;
-            Content += "    [KEY]: [VALUE] # REQUIRED/OPTIONAL" + NewLine;
-            Content += "```" + CarriageRtn;
+            Content += K8Params;
+            Content += "```" + CarriageRtn + NewLine;
 
             //Development
             Content += @"<a id=""example-dev""></a>" + CarriageRtn;
@@ -216,12 +228,12 @@ namespace ServiceBrokerDocGen
             Content += "apiVersion: servicecatalog.k8s.io / v1beta1" + NewLine;
             Content += "kind: ServiceInstance" + NewLine;
             Content += "metadata: " + NewLine;
-            Content += "  name: [VALUE]" + NewLine;
+            Content += "  name: " + AWSSvBSpec.Name + "-dev-complete-example" + NewLine;
             Content += "spec: " + NewLine;
-            Content += "  clusterServiceClassExternalName: [VALUE]" + NewLine;
-            Content += "  clusterServicePlanExternalName: [VALUE]" + NewLine;
+            Content += "  clusterServiceClassExternalName: " + AWSSvBSpec.Name + NewLine;
+            Content += "  clusterServicePlanExternalName: dev" + NewLine;
             Content += "  parameters: " + NewLine;
-            Content += "    [KEY]: [VALUE] # REQUIRED/OPTIONAL" + NewLine;
+            Content += K8Params;
             Content += "```" + CarriageRtn + NewLine;
 
             Content += "### Complete" + NewLine;
@@ -229,13 +241,13 @@ namespace ServiceBrokerDocGen
             Content += "apiVersion: servicecatalog.k8s.io / v1beta1" + NewLine;
             Content += "kind: ServiceInstance" + NewLine;
             Content += "metadata: " + NewLine;
-            Content += "  name: [VALUE]" + NewLine;
+            Content += "  name: " + AWSSvBSpec.Name + "-dev-complete-example" + NewLine;
             Content += "spec: " + NewLine;
-            Content += "  clusterServiceClassExternalName: [VALUE]" + NewLine;
-            Content += "  clusterServicePlanExternalName: [VALUE]" + NewLine;
+            Content += "  clusterServiceClassExternalName: " + AWSSvBSpec.Name + NewLine;
+            Content += "  clusterServicePlanExternalName: production" + NewLine;
             Content += "  parameters: " + NewLine;
-            Content += "    [KEY]: [VALUE] # REQUIRED/OPTIONAL" + NewLine;
-            Content += "```" + CarriageRtn;
+            Content += K8Params;
+            Content += "```" + CarriageRtn + NewLine;
 
             //Custom
             Content += @"<a id = ""example-custom""></a>" + CarriageRtn;
@@ -247,12 +259,12 @@ namespace ServiceBrokerDocGen
             Content += "apiVersion: servicecatalog.k8s.io / v1beta1" + NewLine;
             Content += "kind: ServiceInstance" + NewLine;
             Content += "metadata: " + NewLine;
-            Content += "  name: [VALUE]" + NewLine;
+            Content += "  name: " + AWSSvBSpec.Name + "-custom-complete-example" + NewLine;
             Content += "spec: " + NewLine;
-            Content += "  clusterServiceClassExternalName: [VALUE]" + NewLine;
-            Content += "  clusterServicePlanExternalName: [VALUE]" + NewLine;
+            Content += "  clusterServiceClassExternalName: " + AWSSvBSpec.Name + NewLine;
+            Content += "  clusterServicePlanExternalName: custom" + NewLine;
             Content += "  parameters: " + NewLine;
-            Content += "    [KEY]: [VALUE] # REQUIRED/OPTIONAL" + NewLine;
+            Content += K8Params;
             Content += "```" + CarriageRtn + NewLine;
 
             Content += "### Complete" + NewLine;
@@ -260,13 +272,13 @@ namespace ServiceBrokerDocGen
             Content += "apiVersion: servicecatalog.k8s.io / v1beta1" + NewLine;
             Content += "kind: ServiceInstance" + NewLine;
             Content += "metadata: " + NewLine;
-            Content += "  name: [VALUE]" + NewLine;
+            Content += "  name: " + AWSSvBSpec.Name + "-custom-complete-example" + NewLine;
             Content += "spec: " + NewLine;
-            Content += "  clusterServiceClassExternalName: [VALUE]" + NewLine;
-            Content += "  clusterServicePlanExternalName: [VALUE]" + NewLine;
+            Content += "  clusterServiceClassExternalName: " + AWSSvBSpec.Name + NewLine;
+            Content += "  clusterServicePlanExternalName: custom" + NewLine;
             Content += "  parameters: " + NewLine;
-            Content += "    [KEY]: [VALUE] # REQUIRED/OPTIONAL" + NewLine;
-            Content += "```" + CarriageRtn;
+            Content += K8Params;
+            Content += "```" + CarriageRtn + NewLine;
 
             WriteMarkDownToFile(Content);
         }
