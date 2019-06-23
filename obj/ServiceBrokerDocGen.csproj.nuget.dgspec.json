@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ndrest\\Documents\\GitHub\\local\\ServiceBrokerDocGen\\ServiceBrokerDocGen.csproj": {}
+    "C:\\Users\\ndrest\\Documents\\GitHub\\ServiceBrokerDocGen\\ServiceBrokerDocGen.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ndrest\\Documents\\GitHub\\local\\ServiceBrokerDocGen\\ServiceBrokerDocGen.csproj": {
+    "C:\\Users\\ndrest\\Documents\\GitHub\\ServiceBrokerDocGen\\ServiceBrokerDocGen.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ndrest\\Documents\\GitHub\\local\\ServiceBrokerDocGen\\ServiceBrokerDocGen.csproj",
+        "projectUniqueName": "C:\\Users\\ndrest\\Documents\\GitHub\\ServiceBrokerDocGen\\ServiceBrokerDocGen.csproj",
         "projectName": "ServiceBrokerDocGen",
-        "projectPath": "C:\\Users\\ndrest\\Documents\\GitHub\\local\\ServiceBrokerDocGen\\ServiceBrokerDocGen.csproj",
+        "projectPath": "C:\\Users\\ndrest\\Documents\\GitHub\\ServiceBrokerDocGen\\ServiceBrokerDocGen.csproj",
         "packagesPath": "C:\\Users\\ndrest\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ndrest\\Documents\\GitHub\\local\\ServiceBrokerDocGen\\obj\\",
+        "outputPath": "C:\\Users\\ndrest\\Documents\\GitHub\\ServiceBrokerDocGen\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
