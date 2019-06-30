@@ -20,3 +20,14 @@ C:\Users\ndrest\Documents\GitHub\local\ServiceBrokerDocGen\obj\Debug\netcoreapp2
 C:\Users\ndrest\Documents\GitHub\local\ServiceBrokerDocGen\obj\Debug\netcoreapp2.1\ServiceBrokerDocGen.AssemblyInfo.cs
 C:\Users\ndrest\Documents\GitHub\local\ServiceBrokerDocGen\obj\Debug\netcoreapp2.1\ServiceBrokerDocGen.dll
 C:\Users\ndrest\Documents\GitHub\local\ServiceBrokerDocGen\obj\Debug\netcoreapp2.1\ServiceBrokerDocGen.pdb
+C:\Users\ndrest\Documents\GitHub\ServiceBrokerDocGen\bin\Debug\netcoreapp2.1\ServiceBrokerDocGen.deps.json
+C:\Users\ndrest\Documents\GitHub\ServiceBrokerDocGen\bin\Debug\netcoreapp2.1\ServiceBrokerDocGen.runtimeconfig.json
+C:\Users\ndrest\Documents\GitHub\ServiceBrokerDocGen\bin\Debug\netcoreapp2.1\ServiceBrokerDocGen.runtimeconfig.dev.json
+C:\Users\ndrest\Documents\GitHub\ServiceBrokerDocGen\bin\Debug\netcoreapp2.1\ServiceBrokerDocGen.dll
+C:\Users\ndrest\Documents\GitHub\ServiceBrokerDocGen\bin\Debug\netcoreapp2.1\ServiceBrokerDocGen.pdb
+C:\Users\ndrest\Documents\GitHub\ServiceBrokerDocGen\obj\Debug\netcoreapp2.1\ServiceBrokerDocGen.csprojAssemblyReference.cache
+C:\Users\ndrest\Documents\GitHub\ServiceBrokerDocGen\obj\Debug\netcoreapp2.1\ServiceBrokerDocGen.csproj.CoreCompileInputs.cache
+C:\Users\ndrest\Documents\GitHub\ServiceBrokerDocGen\obj\Debug\netcoreapp2.1\ServiceBrokerDocGen.AssemblyInfoInputs.cache
+C:\Users\ndrest\Documents\GitHub\ServiceBrokerDocGen\obj\Debug\netcoreapp2.1\ServiceBrokerDocGen.AssemblyInfo.cs
+C:\Users\ndrest\Documents\GitHub\ServiceBrokerDocGen\obj\Debug\netcoreapp2.1\ServiceBrokerDocGen.dll
+C:\Users\ndrest\Documents\GitHub\ServiceBrokerDocGen\obj\Debug\netcoreapp2.1\ServiceBrokerDocGen.pdb

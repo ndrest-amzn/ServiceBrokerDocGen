@@ -209,8 +209,20 @@ namespace ServiceBrokerDocGen
             Content += "### Optional" + CarriageRtn;
 
             Content += "These parameters can optionally be declared when provisioning" + CarriageRtn;
-      
-            Content += TableOptional + CarriageRtn;
+
+            var TableCustom = @"Name            | Description     | Default         | Accepted Values" + NewLine;
+            TableCustom += "--------------- | --------------- | --------------- | ---------------" + NewLine;
+            foreach (var item in Params)
+            {
+                string allowedValues = "";
+                if (item.AllowedValues != null)
+                {
+                    allowedValues = String.Join(", ", item.AllowedValues);
+                }
+                TableCustom += item.Name + "|" + item.Description + "|" + item.Default + "|" + allowedValues + NewLine;                
+            }
+
+            Content += TableCustom + CarriageRtn;
 
             Content += @"### Generic" + CarriageRtn;
 
